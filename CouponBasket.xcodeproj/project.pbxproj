@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44130E2F1E942C2D009C6D4A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44130E2E1E942C2D009C6D4A /* DetailViewController.swift */; };
+		442271A31E819BED00F04F49 /* RemindDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442271A21E819BED00F04F49 /* RemindDateViewController.swift */; };
+		442271A61E819DED00F04F49 /* Coupon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442271A41E819DED00F04F49 /* Coupon+CoreDataClass.swift */; };
+		442271A71E819DED00F04F49 /* Coupon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442271A51E819DED00F04F49 /* Coupon+CoreDataProperties.swift */; };
+		442271A91E81ED5C00F04F49 /* GeotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442271A81E81ED5C00F04F49 /* GeotificationViewController.swift */; };
+		442271AB1E81EE1900F04F49 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442271AA1E81EE1900F04F49 /* LocationSearchTable.swift */; };
+		4452F5C91E7B2C5C007540ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5C81E7B2C5C007540ED /* AppDelegate.swift */; };
+		4452F5CE1E7B2C5C007540ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4452F5CC1E7B2C5C007540ED /* Main.storyboard */; };
+		4452F5D11E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5CF1E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodeld */; };
+		4452F5D31E7B2C5C007540ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4452F5D21E7B2C5C007540ED /* Assets.xcassets */; };
+		4452F5D61E7B2C5C007540ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4452F5D41E7B2C5C007540ED /* LaunchScreen.storyboard */; };
+		4452F5E11E7B2C5C007540ED /* TrialCouponedIt___5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5E01E7B2C5C007540ED /* TrialCouponedIt___5Tests.swift */; };
+		4452F5EF1E7B2ED6007540ED /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5EE1E7B2ED6007540ED /* CouponTableViewCell.swift */; };
+		4452F5F11E7B2F06007540ED /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5F01E7B2F06007540ED /* CouponTableViewController.swift */; };
+		4452F5F31E7B36BF007540ED /* AddCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5F21E7B36BF007540ED /* AddCouponViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4452F5DD1E7B2C5C007540ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4452F5BD1E7B2C5C007540ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4452F5C41E7B2C5C007540ED;
+			remoteInfo = "TrialCouponedIt!! 5";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44130E2E1E942C2D009C6D4A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		442271A21E819BED00F04F49 /* RemindDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindDateViewController.swift; sourceTree = "<group>"; };
+		442271A41E819DED00F04F49 /* Coupon+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Coupon+CoreDataClass.swift"; path = "../Coupon+CoreDataClass.swift"; sourceTree = "<group>"; };
+		442271A51E819DED00F04F49 /* Coupon+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Coupon+CoreDataProperties.swift"; path = "../Coupon+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		442271A81E81ED5C00F04F49 /* GeotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeotificationViewController.swift; sourceTree = "<group>"; };
+		442271AA1E81EE1900F04F49 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		4452F5C51E7B2C5C007540ED /* CouponBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouponBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4452F5C81E7B2C5C007540ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4452F5CD1E7B2C5C007540ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4452F5D01E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TrialCouponedIt___5.xcdatamodel"; sourceTree = "<group>"; };
+		4452F5D21E7B2C5C007540ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4452F5D51E7B2C5C007540ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4452F5D71E7B2C5C007540ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4452F5DC1E7B2C5C007540ED /* CouponBasketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CouponBasketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4452F5E01E7B2C5C007540ED /* TrialCouponedIt___5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrialCouponedIt___5Tests.swift"; sourceTree = "<group>"; };
+		4452F5E21E7B2C5C007540ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4452F5EE1E7B2ED6007540ED /* CouponTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
+		4452F5F01E7B2F06007540ED /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
+		4452F5F21E7B36BF007540ED /* AddCouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCouponViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4452F5C21E7B2C5C007540ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4452F5D91E7B2C5C007540ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4452F5BC1E7B2C5C007540ED = {
+			isa = PBXGroup;
+			children = (
+				4452F5C71E7B2C5C007540ED /* TrialCouponedIt!! 5 */,
+				4452F5DF1E7B2C5C007540ED /* TrialCouponedIt!! 5Tests */,
+				4452F5C61E7B2C5C007540ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4452F5C61E7B2C5C007540ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4452F5C51E7B2C5C007540ED /* CouponBasket.app */,
+				4452F5DC1E7B2C5C007540ED /* CouponBasketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4452F5C71E7B2C5C007540ED /* TrialCouponedIt!! 5 */ = {
+			isa = PBXGroup;
+			children = (
+				4452F5ED1E7B2C88007540ED /* Controller */,
+				4452F5EC1E7B2C7F007540ED /* View */,
+				4452F5EB1E7B2C69007540ED /* Model */,
+			);
+			path = "TrialCouponedIt!! 5";
+			sourceTree = "<group>";
+		};
+		4452F5DF1E7B2C5C007540ED /* TrialCouponedIt!! 5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4452F5E01E7B2C5C007540ED /* TrialCouponedIt___5Tests.swift */,
+				4452F5E21E7B2C5C007540ED /* Info.plist */,
+			);
+			path = "TrialCouponedIt!! 5Tests";
+			sourceTree = "<group>";
+		};
+		4452F5EB1E7B2C69007540ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				442271A41E819DED00F04F49 /* Coupon+CoreDataClass.swift */,
+				442271A51E819DED00F04F49 /* Coupon+CoreDataProperties.swift */,
+				4452F5CF1E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodeld */,
+				4452F5D71E7B2C5C007540ED /* Info.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4452F5EC1E7B2C7F007540ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4452F5D41E7B2C5C007540ED /* LaunchScreen.storyboard */,
+				4452F5D21E7B2C5C007540ED /* Assets.xcassets */,
+				4452F5CC1E7B2C5C007540ED /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4452F5ED1E7B2C88007540ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4452F5C81E7B2C5C007540ED /* AppDelegate.swift */,
+				4452F5EE1E7B2ED6007540ED /* CouponTableViewCell.swift */,
+				4452F5F01E7B2F06007540ED /* CouponTableViewController.swift */,
+				4452F5F21E7B36BF007540ED /* AddCouponViewController.swift */,
+				442271A21E819BED00F04F49 /* RemindDateViewController.swift */,
+				442271A81E81ED5C00F04F49 /* GeotificationViewController.swift */,
+				442271AA1E81EE1900F04F49 /* LocationSearchTable.swift */,
+				44130E2E1E942C2D009C6D4A /* DetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4452F5C41E7B2C5C007540ED /* CouponBasket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4452F5E51E7B2C5C007540ED /* Build configuration list for PBXNativeTarget "CouponBasket" */;
+			buildPhases = (
+				4452F5C11E7B2C5C007540ED /* Sources */,
+				4452F5C21E7B2C5C007540ED /* Frameworks */,
+				4452F5C31E7B2C5C007540ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CouponBasket;
+			productName = "TrialCouponedIt!! 5";
+			productReference = 4452F5C51E7B2C5C007540ED /* CouponBasket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4452F5DB1E7B2C5C007540ED /* CouponBasketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4452F5E81E7B2C5C007540ED /* Build configuration list for PBXNativeTarget "CouponBasketTests" */;
+			buildPhases = (
+				4452F5D81E7B2C5C007540ED /* Sources */,
+				4452F5D91E7B2C5C007540ED /* Frameworks */,
+				4452F5DA1E7B2C5C007540ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4452F5DE1E7B2C5C007540ED /* PBXTargetDependency */,
+			);
+			name = CouponBasketTests;
+			productName = "TrialCouponedIt!! 5Tests";
+			productReference = 4452F5DC1E7B2C5C007540ED /* CouponBasketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4452F5BD1E7B2C5C007540ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Apoorva Moodbidri";
+				TargetAttributes = {
+					4452F5C41E7B2C5C007540ED = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F8BH6WSJMX;
+						ProvisioningStyle = Automatic;
+					};
+					4452F5DB1E7B2C5C007540ED = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F8BH6WSJMX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4452F5C41E7B2C5C007540ED;
+					};
+				};
+			};
+			buildConfigurationList = 4452F5C01E7B2C5C007540ED /* Build configuration list for PBXProject "CouponBasket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4452F5BC1E7B2C5C007540ED;
+			productRefGroup = 4452F5C61E7B2C5C007540ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4452F5C41E7B2C5C007540ED /* CouponBasket */,
+				4452F5DB1E7B2C5C007540ED /* CouponBasketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4452F5C31E7B2C5C007540ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4452F5D61E7B2C5C007540ED /* LaunchScreen.storyboard in Resources */,
+				4452F5D31E7B2C5C007540ED /* Assets.xcassets in Resources */,
+				4452F5CE1E7B2C5C007540ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4452F5DA1E7B2C5C007540ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4452F5C11E7B2C5C007540ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44130E2F1E942C2D009C6D4A /* DetailViewController.swift in Sources */,
+				442271A91E81ED5C00F04F49 /* GeotificationViewController.swift in Sources */,
+				442271AB1E81EE1900F04F49 /* LocationSearchTable.swift in Sources */,
+				442271A61E819DED00F04F49 /* Coupon+CoreDataClass.swift in Sources */,
+				442271A71E819DED00F04F49 /* Coupon+CoreDataProperties.swift in Sources */,
+				4452F5EF1E7B2ED6007540ED /* CouponTableViewCell.swift in Sources */,
+				4452F5F11E7B2F06007540ED /* CouponTableViewController.swift in Sources */,
+				4452F5F31E7B36BF007540ED /* AddCouponViewController.swift in Sources */,
+				4452F5D11E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodeld in Sources */,
+				4452F5C91E7B2C5C007540ED /* AppDelegate.swift in Sources */,
+				442271A31E819BED00F04F49 /* RemindDateViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4452F5D81E7B2C5C007540ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4452F5E11E7B2C5C007540ED /* TrialCouponedIt___5Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4452F5DE1E7B2C5C007540ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4452F5C41E7B2C5C007540ED /* CouponBasket */;
+			targetProxy = 4452F5DD1E7B2C5C007540ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4452F5CC1E7B2C5C007540ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4452F5CD1E7B2C5C007540ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4452F5D41E7B2C5C007540ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4452F5D51E7B2C5C007540ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4452F5E31E7B2C5C007540ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4452F5E41E7B2C5C007540ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4452F5E61E7B2C5C007540ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F8BH6WSJMX;
+				INFOPLIST_FILE = "TrialCouponedIt!! 5/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.TrialCouponedIt---5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4452F5E71E7B2C5C007540ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F8BH6WSJMX;
+				INFOPLIST_FILE = "TrialCouponedIt!! 5/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.TrialCouponedIt---5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4452F5E91E7B2C5C007540ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F8BH6WSJMX;
+				INFOPLIST_FILE = "TrialCouponedIt!! 5Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.TrialCouponedIt---5Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CouponBasket.app/CouponBasket";
+			};
+			name = Debug;
+		};
+		4452F5EA1E7B2C5C007540ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F8BH6WSJMX;
+				INFOPLIST_FILE = "TrialCouponedIt!! 5Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.TrialCouponedIt---5Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CouponBasket.app/CouponBasket";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4452F5C01E7B2C5C007540ED /* Build configuration list for PBXProject "CouponBasket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4452F5E31E7B2C5C007540ED /* Debug */,
+				4452F5E41E7B2C5C007540ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4452F5E51E7B2C5C007540ED /* Build configuration list for PBXNativeTarget "CouponBasket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4452F5E61E7B2C5C007540ED /* Debug */,
+				4452F5E71E7B2C5C007540ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4452F5E81E7B2C5C007540ED /* Build configuration list for PBXNativeTarget "CouponBasketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4452F5E91E7B2C5C007540ED /* Debug */,
+				4452F5EA1E7B2C5C007540ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4452F5CF1E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4452F5D01E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodel */,
+			);
+			currentVersion = 4452F5D01E7B2C5C007540ED /* TrialCouponedIt___5.xcdatamodel */;
+			path = "TrialCouponedIt___5.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4452F5BD1E7B2C5C007540ED /* Project object */;
+}
