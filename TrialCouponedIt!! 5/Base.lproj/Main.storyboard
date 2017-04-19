@@ -13,13 +13,13 @@
         <!--Coupon Table View Controller-->
         <scene sceneID="c1S-iP-PR9">
             <objects>
-                <tableViewController id="i2Q-3e-JIV" customClass="CouponTableViewController" customModule="TrialCouponedIt___5" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="i2Q-3e-JIV" customClass="CouponTableViewController" customModule="CouponBasket" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" id="ppR-XE-hFp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="148" id="4nq-HB-hie" customClass="CouponTableViewCell" customModule="TrialCouponedIt___5" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="148" id="4nq-HB-hie" customClass="CouponTableViewCell" customModule="CouponBasket" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4nq-HB-hie" id="fuH-6Q-qoX">
@@ -102,7 +102,7 @@
         <!--AddCoupon-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AddCouponViewController" customModule="TrialCouponedIt___5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddCouponViewController" customModule="CouponBasket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -194,7 +194,7 @@
         <!--DetailView-->
         <scene sceneID="27M-xg-UDI">
             <objects>
-                <viewController id="m2m-Pt-A1Z" customClass="DetailViewController" customModule="TrialCouponedIt___5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m2m-Pt-A1Z" customClass="DetailViewController" customModule="CouponBasket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hcO-6a-dYy"/>
                         <viewControllerLayoutGuide type="bottom" id="Hza-S4-GpG"/>
@@ -254,7 +254,7 @@
         <!--Location-->
         <scene sceneID="Av6-JR-3v6">
             <objects>
-                <viewController id="FeK-ff-3tj" customClass="GeotificationViewController" customModule="TrialCouponedIt___5" sceneMemberID="viewController">
+                <viewController id="FeK-ff-3tj" customClass="GeotificationViewController" customModule="CouponBasket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sHo-kx-ocx"/>
                         <viewControllerLayoutGuide type="bottom" id="yvX-i8-ZBt"/>
@@ -316,7 +316,7 @@
         <!--Location Search Table-->
         <scene sceneID="6Z6-0x-V3R">
             <objects>
-                <tableViewController storyboardIdentifier="LocationSearchTable" id="zV7-2a-jmB" customClass="LocationSearchTable" customModule="TrialCouponedIt___5" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearchTable" id="zV7-2a-jmB" customClass="LocationSearchTable" customModule="CouponBasket" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bW9-g8-r7t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,7 +360,7 @@
         <!--Remind Date -->
         <scene sceneID="nNU-hT-jYA">
             <objects>
-                <viewController id="iC7-Mb-c4u" customClass="RemindDateViewController" customModule="TrialCouponedIt___5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iC7-Mb-c4u" customClass="RemindDateViewController" customModule="CouponBasket" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kfB-iz-kqT"/>
                         <viewControllerLayoutGuide type="bottom" id="9Pk-6z-6eL"/>
