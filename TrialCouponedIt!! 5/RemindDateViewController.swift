@@ -26,11 +26,13 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
    
     var delegate:SaveCouponName? = nil
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      UNUserNotificationCenter.current().delegate = self 
+      UNUserNotificationCenter.current().delegate = self
+     
        
     }
 
@@ -88,16 +90,7 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
        _ = navigationController?.popViewController(animated: true)
     }
     
-    func editingChanged(_ textField:UITextField)
-    {
-        if textField.text?.characters.count == 1 {
-            if textField.text?.characters.first == " " {
-                textField.text = ""
-                return
-            }
-        }
-        
-    }
+    
     
     /*
     // MARK: - Navigation

@@ -429,6 +429,7 @@
                         <outlet property="couponNameTextField" destination="iLi-xX-I0U" id="hQs-3R-qRi"/>
                         <outlet property="datePicker" destination="9L8-Zg-ry8" id="ov8-j3-toA"/>
                         <outlet property="messageTextField" destination="8Ii-c2-vfb" id="4e6-sr-knA"/>
+                        <outlet property="saveButton" destination="XRF-Ah-Uvm" id="vO1-p5-b4O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPo-hZ-j3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
