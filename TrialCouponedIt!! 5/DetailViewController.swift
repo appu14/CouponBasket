@@ -50,8 +50,16 @@ class DetailViewController: UIViewController {
         locationNameLabel.layer.borderWidth = 0
        // locationNameLabel.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
 //        locationNameLabel.layer.masksToBounds = true
+        let borderWidth:CGFloat = 1.0
+        let borderColor:UIColor = UIColor.lightGray
+        expiryDateLabel.addRightBorderWithColor(color: borderColor, width: borderWidth)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.isTranslucent = true
+        view.isOpaque = false
+//        self.view.backgroundColor = UIColor(red:0.04, green:0.18, blue:0.34, alpha:1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,3 +84,4 @@ class DetailViewController: UIViewController {
     */
 
 }
+

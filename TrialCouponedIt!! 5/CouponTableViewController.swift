@@ -36,6 +36,7 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
        // definesPresentationContext = true
         searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
+        tableView.contentOffset = CGPoint(x: 0.0, y: 44.0)
         loadData()
         
         
@@ -95,6 +96,16 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
     
          
         }
+        
+        cell.couponImageView.layer.frame = cell.couponImageView.layer.frame.insetBy(dx: 0, dy: 0)
+        
+        
+        cell.couponImageView.layer.borderWidth = 0.0
+        cell.couponImageView.layer.cornerRadius =  cell.couponImageView.frame.height/2
+        cell.couponImageView.layer.masksToBounds = false
+        cell.couponImageView.clipsToBounds = true
+        cell.couponImageView.contentMode = UIViewContentMode.scaleAspectFill
+
         return cell
     }
     

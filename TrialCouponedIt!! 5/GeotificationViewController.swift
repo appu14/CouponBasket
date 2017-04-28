@@ -27,6 +27,12 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
     
     @IBOutlet weak var messageTextField: UITextField!
   
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+   
+    
+    
+    
     var locationManager = CLLocationManager()
     var resultSearchController:UISearchController? = nil
     var selectedPin:MKPlacemark? = nil
@@ -84,12 +90,27 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
         //This passes along a handle of the mapView from the Geo View Controller onto the locationSearchTable
         
         locationSearchTable.handleMapSearchDelegate = self
-        
+        saveButton.isEnabled = false
         //keyboard function 
         messageTextField.delegate = self
+        messageTextField.addTarget(self, action: #selector(editTextField(_:)), for: .editingChanged)
         
     }
     
+    func editTextField(_ textField:UITextField) {
+        if textField.text?.characters.count == 1 {
+            if textField.text?.characters.first == " " {
+                 textField.text = ""
+                return
+            }
+        }
+        guard let message = messageTextField.text, !message.isEmpty
+            else {
+                saveButton.isEnabled = false
+                return
+        }
+        saveButton.isEnabled = true
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         messageTextField.resignFirstResponder()

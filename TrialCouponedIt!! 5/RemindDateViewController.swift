@@ -32,10 +32,36 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
       UNUserNotificationCenter.current().delegate = self
-     
-       
+        saveButton.isEnabled = false
+        couponNameTextField.delegate = self
+        messageTextField.delegate = self
+        couponNameTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
+        messageTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
+        
     }
-
+  //separate func for checking the textfield is not empty and then call it on each textfield 
+    func editTextfield(_ textField: UITextField) {
+        if textField.text?.characters.count == 1 {
+            if textField.text?.characters.first == " " {
+                textField.text = ""
+                return
+            }
+        }
+        guard
+        let couponName = couponNameTextField.text, !couponName.isEmpty,
+        let message = messageTextField.text, !message.isEmpty
+            else {
+                saveButton.isEnabled = false
+                return
+        }
+        saveButton.isEnabled = true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     func scheduleNotification(at date:Date) {
         let calendar = Calendar(identifier: .gregorian)
         let components = calendar.dateComponents(in: .current, from: date)
@@ -77,6 +103,11 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
     //MARK: Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        if (messageTextField.text?.isEmpty)! || (couponNameTextField.text?.isEmpty)! {
+            saveButton.isEnabled = false
+        } else {
+            saveButton.isEnabled = true
+        }
         scheduleNotification(at: datePicker.date)
         delegate?.saveCoupon(name: couponNameTextField.text!, date: datePicker.date)
         _ = navigationController?.popViewController(animated: true)

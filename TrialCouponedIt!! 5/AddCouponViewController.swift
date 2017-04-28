@@ -22,6 +22,8 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     
     @IBOutlet weak var couponNameLabel: UILabel!
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     let imagePicker = UIImagePickerController()
     var selectedImage:UIImage? = nil
     var couponName:String? = nil
@@ -39,20 +41,33 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         couponIMage.addGestureRecognizer(tapGesture)
     //enable user interaction for the imageView
         couponIMage.isUserInteractionEnabled = true
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     
-     
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.isTranslucent = true
         view.isOpaque = false
-        view.backgroundColor = UIColor.lightGray.withAlphaComponent(75)
-        expiryDateReminderButton.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-        expiryDateReminderButton.layer.cornerRadius = 12
-        expiryDateReminderButton.layer.borderWidth = 0
-        locationNotifierButton.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-        locationNotifierButton.layer.cornerRadius = 12
-        locationNotifierButton.layer.borderWidth = 0
-        couponNameLabel.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-        couponNameLabel.layer.masksToBounds = true
-        couponNameLabel.layer.cornerRadius = 12
-        couponNameLabel.layer.borderWidth = 0
+//        self.view.backgroundColor = UIColor(red:0.27, green:0.53, blue:0.64, alpha:1.0)
+        //view.backgroundColor = UIColor.lightGray.withAlphaComponent(75)
+        //expiryDateReminderButton.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
+        //expiryDateReminderButton.layer.cornerRadius = 12
+//        expiryDateReminderButton.layer.borderWidth = 0.5
+     
+        let borderWidth:CGFloat = 1.0
+        let borderColor:UIColor = UIColor.lightGray
+        expiryDateReminderButton.addRightBorderWithColor(color: borderColor, width: borderWidth)
+        
+        //locationNotifierButton.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
+       // locationNotifierButton.layer.cornerRadius = 12
+       // locationNotifierButton.layer.borderWidth = 0
+        //couponNameLabel.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
+       // couponNameLabel.layer.masksToBounds = true
+       // couponNameLabel.layer.cornerRadius = 12
+       // couponNameLabel.layer.borderWidth = 0
+        saveButton.isEnabled = false
+        
+        
         
     }
 
@@ -139,7 +154,8 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         print("please ya \(name) \(date)")
         couponName = name
         expiryDate = date
-        couponNameLabel.text = name 
+        couponNameLabel.text = name
+    saveButton.isEnabled = true
     
     }
     
@@ -161,6 +177,7 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -180,4 +197,12 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
 
+}
+extension UIView{
+    func addRightBorderWithColor(color:UIColor,width:CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
 }
