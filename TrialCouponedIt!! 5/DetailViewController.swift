@@ -8,10 +8,11 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,UIScrollViewDelegate{
 
     //Properties 
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var couponNameLabel: UILabel!
     var cName:String? = nil
@@ -38,18 +39,16 @@ class DetailViewController: UIViewController {
         
         couponNameLabel.layer.cornerRadius = 07
         couponNameLabel.layer.borderWidth = 0
-       // couponNameLabel.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
+
         couponNameLabel.layer.masksToBounds = true
         
         expiryDateLabel.layer.cornerRadius = 07
         expiryDateLabel.layer.borderWidth = 0
-        //expiryDateLabel.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-//        expiryDateLabel.layer.masksToBounds = true
+
         
         locationNameLabel.layer.cornerRadius = 12
         locationNameLabel.layer.borderWidth = 0
-       // locationNameLabel.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-//        locationNameLabel.layer.masksToBounds = true
+
         let borderWidth:CGFloat = 1.0
         let borderColor:UIColor = UIColor.lightGray
         expiryDateLabel.addRightBorderWithColor(color: borderColor, width: borderWidth)
@@ -59,7 +58,20 @@ class DetailViewController: UIViewController {
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationController?.navigationBar.isTranslucent = true
         view.isOpaque = false
-//        self.view.backgroundColor = UIColor(red:0.04, green:0.18, blue:0.34, alpha:1.0)
+        
+        //scrollview
+        self.scrollView.addSubview(couponImageView)
+        self.scrollView.contentSize = view.frame.size
+        self.scrollView.maximumZoomScale = 2.0
+        self.scrollView.minimumZoomScale = 0.1
+        self.scrollView.delegate = self
+
+    }
+    
+    //scrollview delegate 
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return scrollView.subviews.first
+        // returns a view that will be scaled. if delegate returns nil, nothing happens
     }
 
     override func didReceiveMemoryWarning() {

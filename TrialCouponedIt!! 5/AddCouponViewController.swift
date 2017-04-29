@@ -41,30 +41,21 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         couponIMage.addGestureRecognizer(tapGesture)
     //enable user interaction for the imageView
         couponIMage.isUserInteractionEnabled = true
-        
+        //make navigation controller transparent
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
     
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.navigationController?.navigationBar.isTranslucent = true
         view.isOpaque = false
-//        self.view.backgroundColor = UIColor(red:0.27, green:0.53, blue:0.64, alpha:1.0)
-        //view.backgroundColor = UIColor.lightGray.withAlphaComponent(75)
-        //expiryDateReminderButton.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-        //expiryDateReminderButton.layer.cornerRadius = 12
-//        expiryDateReminderButton.layer.borderWidth = 0.5
+
+        
      
         let borderWidth:CGFloat = 1.0
         let borderColor:UIColor = UIColor.lightGray
         expiryDateReminderButton.addRightBorderWithColor(color: borderColor, width: borderWidth)
         
-        //locationNotifierButton.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-       // locationNotifierButton.layer.cornerRadius = 12
-       // locationNotifierButton.layer.borderWidth = 0
-        //couponNameLabel.backgroundColor = UIColor(red:0.17, green:0.52, blue:0.55, alpha:1.0)
-       // couponNameLabel.layer.masksToBounds = true
-       // couponNameLabel.layer.cornerRadius = 12
-       // couponNameLabel.layer.borderWidth = 0
+       
         saveButton.isEnabled = false
         
         
