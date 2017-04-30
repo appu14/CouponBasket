@@ -65,6 +65,8 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         self.scrollView.maximumZoomScale = 2.0
         self.scrollView.minimumZoomScale = 0.1
         self.scrollView.delegate = self
+       
+        // scrollView.contentOffset = CGPoint(x: 1000, y: 450)
 
     }
     

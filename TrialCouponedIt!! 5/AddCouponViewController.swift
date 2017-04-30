@@ -24,6 +24,13 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    
+    
     let imagePicker = UIImagePickerController()
     var selectedImage:UIImage? = nil
     var couponName:String? = nil
@@ -147,11 +154,17 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         expiryDate = date
         couponNameLabel.text = name
     saveButton.isEnabled = true
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy-MM-dd"
+        let datestring = dateformatter.string(from:date)
+        dateLabel.text  = datestring
+        
     
     }
     
     func saveLocation(locationName: String) {
         locationNameToNotify = locationName
+        locationLabel.text = locationName
     }
    
     //MARK: Actions
@@ -178,6 +191,8 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         let destinationViewController = segue.destination as! RemindDateViewController
         // Pass the selected object to the new view controller.
         destinationViewController.delegate = self
+            
+            
         }
         else
             if segue.identifier == "MapSegue" {
