@@ -62,7 +62,8 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         //scrollview
         self.scrollView.addSubview(couponImageView)
         self.scrollView.contentSize = view.frame.size
-        self.scrollView.maximumZoomScale = 2.0
+        self.scrollView.maximumZoomScale = 1.0
+        
         self.scrollView.minimumZoomScale = 0.1
         self.scrollView.delegate = self
        
