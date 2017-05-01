@@ -52,11 +52,11 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         let borderWidth:CGFloat = 1.0
         let borderColor:UIColor = UIColor.lightGray
         expiryDateLabel.addRightBorderWithColor(color: borderColor, width: borderWidth)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+       // self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+      //  self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        self.navigationController?.navigationBar.isTranslucent = true
+      //  self.navigationController?.view.backgroundColor = UIColor.clear
+      //  self.navigationController?.navigationBar.isTranslucent = true
         view.isOpaque = false
         
         //scrollview

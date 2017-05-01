@@ -18,21 +18,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        initializeCustomNavBarColor()
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (granted, error) in
             if !granted {
                 print("Failed \(error.debugDescription)")
             }
         }
-        initializeCustomNavBarColor()
+        
         return true
     }
     
     func initializeCustomNavBarColor() -> Void {
         UINavigationBar.appearance().setBackgroundImage(UIImage.init(named: "nav_bar"), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
         UIBarButtonItem.appearance().tintColor = UIColor.white
-        //Since iOS 7.0 UITextAttributeTextColor was replaced by NSForegroundColorAttributeName
-        UINavigationBar.appearance().titleTextAttributes =  [NSForegroundColorAttributeName : UIColor.white]
-        //UITabBar.appearance().backgroundColor = UIColor.yellowColor();
+       // Since iOS 7.0 UITextAttributeTextColor was replaced by NSForegroundColorAttributeName
+        UINavigationBar.appearance().titleTextAttributes =  [NSForegroundColorAttributeName : UIColor.white, NSBackgroundColorAttributeName : UIColor.white]
+       // UITabBar.appearance().backgroundColor = UIColor.yellowColor();
 
     }
 

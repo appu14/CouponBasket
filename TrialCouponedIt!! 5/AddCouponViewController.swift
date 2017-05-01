@@ -49,11 +49,11 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     //enable user interaction for the imageView
         couponIMage.isUserInteractionEnabled = true
         //make navigation controller transparent
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
     
-        self.navigationController?.view.backgroundColor = UIColor.clear
-        self.navigationController?.navigationBar.isTranslucent = true
+//        self.navigationController?.view.backgroundColor = UIColor.clear
+//        self.navigationController?.navigationBar.isTranslucent = true
         view.isOpaque = false
 
         
