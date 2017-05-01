@@ -95,7 +95,7 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
         //keyboard function
         messageTextField.delegate = self
         //messageTextField.addTarget(self, action: #selector(editTextField(_:)), for: .editingChanged)
-        
+        //messageTextField.addTarget(self, action: #selector(editTextField(_:)), for: .editingChanged)
     }
     
 //    func editTextField(_ textField:UITextField) {
