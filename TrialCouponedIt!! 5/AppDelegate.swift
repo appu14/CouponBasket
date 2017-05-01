@@ -23,7 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Failed \(error.debugDescription)")
             }
         }
+        initializeCustomNavBarColor()
         return true
+    }
+    
+    func initializeCustomNavBarColor() -> Void {
+        UINavigationBar.appearance().setBackgroundImage(UIImage.init(named: "nav_bar"), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+        UIBarButtonItem.appearance().tintColor = UIColor.white
+        //Since iOS 7.0 UITextAttributeTextColor was replaced by NSForegroundColorAttributeName
+        UINavigationBar.appearance().titleTextAttributes =  [NSForegroundColorAttributeName : UIColor.white]
+        //UITabBar.appearance().backgroundColor = UIColor.yellowColor();
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
