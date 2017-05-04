@@ -53,6 +53,7 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
             let alert = UIAlertController(title: "Alert", message: "Please enable the Location", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+           
             
                case .notDetermined :
             locationManager.requestAlwaysAuthorization()

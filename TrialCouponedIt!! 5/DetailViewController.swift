@@ -52,7 +52,8 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         let borderWidth:CGFloat = 1.0
         let borderColor:UIColor = UIColor.lightGray
         expiryDateLabel.addRightBorderWithColor(color: borderColor, width: borderWidth)
-       // self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+    
+        // self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
       //  self.navigationController?.navigationBar.shadowImage = UIImage()
         
       //  self.navigationController?.view.backgroundColor = UIColor.clear
@@ -60,14 +61,22 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         view.isOpaque = false
         
         //scrollview
-        self.scrollView.addSubview(couponImageView)
+      
+        scrollView.backgroundColor = UIColor.black
         self.scrollView.contentSize = view.frame.size
-        self.scrollView.maximumZoomScale = 1.0
         
-        self.scrollView.minimumZoomScale = 0.1
+        
+        self.scrollView.addSubview(couponImageView)
+        
         self.scrollView.delegate = self
+        
+        scrollView.maximumZoomScale = 2.0
+        scrollView.minimumZoomScale = 0.1
+        
+        
+        
        
-        // scrollView.contentOffset = CGPoint(x: 1000, y: 450)
+//         scrollView.contentOffset = CGPoint(x: 1000, y: 450)
 
     }
     
@@ -76,10 +85,27 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         return scrollView.subviews.first
         // returns a view that will be scaled. if delegate returns nil, nothing happens
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+//    func setZoomScale()
+//    {
+//        let imageViewSize = couponImageView.bounds.size
+//        let scrollViewSize = scrollView.bounds.size
+//        let widthScale = scrollViewSize.width / imageViewSize.width
+//        let heightScale = scrollViewSize.height / imageViewSize.height
+//        scrollView.minimumZoomScale = min(widthScale, heightScale)
+//        scrollView.zoomScale = 1.0
+//        
+//    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        //basically to place the image back to center after zooming
+        let imageViewSize = couponImageView.frame.size
+        let scrollViewSize = scrollView.bounds.size
+        
+        let verticalPadding = imageViewSize.height < scrollViewSize.height ? (scrollViewSize.height - imageViewSize.height) / 2:0
+        let horizontalPadding = imageViewSize.width < scrollViewSize.width ? (scrollViewSize.width - imageViewSize.width) / 2:0
+        
+        scrollView.contentInset = UIEdgeInsets(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding)
     }
     
 

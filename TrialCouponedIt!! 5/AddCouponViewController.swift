@@ -48,12 +48,14 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         couponIMage.addGestureRecognizer(tapGesture)
     //enable user interaction for the imageView
         couponIMage.isUserInteractionEnabled = true
+       
+        
         //make navigation controller transparent
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     
-//        self.navigationController?.view.backgroundColor = UIColor.clear
-//        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.isTranslucent = true
         view.isOpaque = false
 
         
@@ -62,8 +64,9 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         let borderColor:UIColor = UIColor.lightGray
         expiryDateReminderButton.addRightBorderWithColor(color: borderColor, width: borderWidth)
         
-       
+        
         saveButton.isEnabled = false
+        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
         
         
         
@@ -210,5 +213,14 @@ extension UIView{
         border.backgroundColor = color.cgColor
         border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
         self.layer.addSublayer(border)
+    }
+}
+extension UIView {
+    func addGradientWithColor(color: UIColor) {
+        let gradient = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = [UIColor.darkGray.cgColor, color.cgColor]
+        
+        self.layer.insertSublayer(gradient, at: 0)
     }
 }

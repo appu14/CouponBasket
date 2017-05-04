@@ -38,6 +38,8 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
         couponNameTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
         messageTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
         
+      
+        
     }
   //separate func for checking the textfield is not empty and then call it on each textfield 
     func editTextfield(_ textField: UITextField) {
