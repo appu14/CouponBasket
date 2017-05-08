@@ -35,10 +35,24 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
         saveButton.isEnabled = false
         couponNameTextField.delegate = self
         messageTextField.delegate = self
+        
+        //save button is not enabled unless the textfields are empty 
         couponNameTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
         messageTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
         
-      
+        
+        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
+        messageTextField.backgroundColor = UIColor.clear
+        couponNameTextField.backgroundColor = UIColor.clear
+       
+        //cursor color for textfield
+        messageTextField.tintColor = UIColor.black
+        couponNameTextField.tintColor = UIColor.black
+        
+        
+        
+        
+        
         
     }
   //separate func for checking the textfield is not empty and then call it on each textfield 
@@ -57,12 +71,17 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
                 return
         }
         saveButton.isEnabled = true
+        
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
+    
+  
+    
     
     func scheduleNotification(at date:Date) {
         let calendar = Calendar(identifier: .gregorian)

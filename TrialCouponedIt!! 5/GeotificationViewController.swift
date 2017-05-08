@@ -97,6 +97,9 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
         messageTextField.delegate = self
         //messageTextField.addTarget(self, action: #selector(editTextField(_:)), for: .editingChanged)
         //messageTextField.addTarget(self, action: #selector(editTextField(_:)), for: .editingChanged)
+        
+        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
+        messageTextField.backgroundColor = UIColor.clear
     }
     
 //    func editTextField(_ textField:UITextField) {

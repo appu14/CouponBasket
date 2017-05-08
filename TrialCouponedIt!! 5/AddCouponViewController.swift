@@ -68,6 +68,8 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         saveButton.isEnabled = false
         view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
         
+        couponNameLabel.text = couponNameLabel.text?.uppercased()
+        
         
         
     }
@@ -112,6 +114,7 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
                 imagePicker.mediaTypes = ["public.image"]
                 self.present(imagePicker, animated: true, completion: nil)
             }
+            
         } else {
             noCamera()
         }

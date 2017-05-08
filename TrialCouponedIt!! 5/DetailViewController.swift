@@ -73,7 +73,11 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         scrollView.maximumZoomScale = 2.0
         scrollView.minimumZoomScale = 0.1
         
+        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
         
+        couponNameLabel.text = couponNameLabel.text?.uppercased()
+        locationNameLabel.text = locationNameLabel.text?.uppercased()
+        expiryDateLabel.text = expiryDateLabel.text?.uppercased()
         
        
 //         scrollView.contentOffset = CGPoint(x: 1000, y: 450)
