@@ -90,33 +90,19 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
         locationSearchTable.mapView = mapView
         //This passes along a handle of the mapView from the Geo View Controller onto the locationSearchTable
         
-        locationSearchTable.handleMapSearchDelegate = self
+                locationSearchTable.handleMapSearchDelegate = self
+
         
        
         //keyboard function
         messageTextField.delegate = self
-        //messageTextField.addTarget(self, action: #selector(editTextField(_:)), for: .editingChanged)
-        //messageTextField.addTarget(self, action: #selector(editTextField(_:)), for: .editingChanged)
         
-        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
+        
+        
         messageTextField.backgroundColor = UIColor.clear
     }
     
-//    func editTextField(_ textField:UITextField) {
-//        if textField.text?.characters.count == 1 {
-//            if textField.text?.characters.first == " " {
-//                 textField.text = ""
-//                return
-//            }
-//        }
-//        guard let message = messageTextField.text, !message.isEmpty
-//            else {
-//                saveButton.isEnabled = false
-//                return
-//        }
-//        saveButton.isEnabled = true
-//    }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         messageTextField.resignFirstResponder()
         return true
@@ -166,6 +152,7 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
     @IBAction func saveButtonTapped(_ sender: Any) {
         
         delegate?.saveLocation(locationName: (selectedPin?.name)!)
+        print("why \(selectedPin!)")
         scheduleNotification(location: selectedPin!)
         _ = navigationController?.popViewController(animated: true)
     }
@@ -196,7 +183,7 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
             
             let content  = UNMutableNotificationContent()
             content.title = "Notification"
-            content.body = messageTextField.text!
+            content.body = "This is your location"
             
             let request = UNNotificationRequest(identifier: (selectedPin?.name!)!, content: content, trigger: trigger)
         
@@ -224,6 +211,7 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
 extension GeotificationViewController:HandleMapSearch {
     internal func dropPinZoomIn(_ placemark: MKPlacemark) {
         //Store the selected placemark
+        print(placemark)
         selectedPin = placemark
        
         //clear the exsisting pins

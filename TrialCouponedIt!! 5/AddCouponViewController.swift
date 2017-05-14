@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SafariServices
+
+
 protocol SaveCoupon {
     func saveCoupon(image:UIImage, name:String, date:Date, locationName:String)
 }
@@ -28,6 +31,10 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     
     
     @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var searchonlineButton: UIButton!
+    
+    
     
     
     
@@ -58,19 +65,20 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         self.navigationController?.navigationBar.isTranslucent = true
         view.isOpaque = false
 
-        
-     
-        let borderWidth:CGFloat = 1.0
-        let borderColor:UIColor = UIColor.lightGray
-        expiryDateReminderButton.addRightBorderWithColor(color: borderColor, width: borderWidth)
-        
-        
         saveButton.isEnabled = false
-        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
         
         couponNameLabel.text = couponNameLabel.text?.uppercased()
         
+       let image = UIImage(named: "ButtonImage") as UIImage?
+        searchonlineButton.setImage(image, for: .normal)
+       let locImage = UIImage(named: "locationImage") as UIImage?
+        locationNotifierButton.setImage(locImage, for: .normal)
+       let reminderImage = UIImage(named: "timeImage") as UIImage?
+        expiryDateReminderButton.setImage(reminderImage, for: .normal)
         
+        
+        
+      
         
     }
 
@@ -114,7 +122,7 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
                 imagePicker.mediaTypes = ["public.image"]
                 self.present(imagePicker, animated: true, completion: nil)
             }
-            
+          UIImageWriteToSavedPhotosAlbum(couponIMage.image!, nil, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         } else {
             noCamera()
         }
@@ -143,16 +151,35 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         var image = UIImage()
         image = info[UIImagePickerControllerOriginalImage]  as! UIImage //specifies the original image selected by the user
+        couponIMage.contentMode = .scaleAspectFit
         couponIMage.image = image
         self.dismiss(animated: true, completion: nil)
+    
         let imageData:Data? = UIImageJPEGRepresentation(image, 1)//Returns the data for the specified image in JPEG format.
         selectedImage = UIImage(data: imageData!)//Initializes and returns the image object with the specified data.
-        UIImageWriteToSavedPhotosAlbum(selectedImage!, nil, nil, nil)//saves the user selected photo the photoLibrary
+        //UIImageWriteToSavedPhotosAlbum(selectedImage!, nil, nil, nil)//saves the user selected photo the photoLibrary
+ 
+    }
+    
+    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
    //Protocol Adaption
     func saveCoupon(name: String, date: Date) {
         print("please ya \(name) \(date)")
@@ -173,7 +200,18 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         locationLabel.text = locationName
     }
    
-    //MARK: Actions
+       //MARK: Actions
+    
+    
+    @IBAction func onlineSearchTapped(_ sender: Any) {
+        if let url = NSURL(string: "http://www.google.com") {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+            
+        }
+        
+        
+    }
+    
 
     @IBAction func saveButtonTapped(_ sender: Any) {
         delegate?.saveCoupon(image: couponIMage.image!, name: couponName!, date: expiryDate!, locationName: locationNameToNotify!)
@@ -187,6 +225,7 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     }
     
     
+  
     
     // MARK: - Navigation
 

@@ -47,6 +47,7 @@ class LocationSearchTable:UITableViewController {
             // state
             selectedItem.administrativeArea ?? ""   // to get the proper address format
         )
+        
         return addressLine
     }
     //this is to make the address apppear in a presentable form like "262 Bush Street SanFrancisco"

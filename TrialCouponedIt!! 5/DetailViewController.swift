@@ -32,8 +32,11 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
 
         // Do any additional setup after loading the view.
         couponImageView.image = cimage 
+       
         couponNameLabel.text = cName
+        
         expiryDateLabel.text = dateString
+        
         locationNameLabel.text = location
         
         
@@ -72,13 +75,7 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         
         scrollView.maximumZoomScale = 2.0
         scrollView.minimumZoomScale = 0.1
-        
-        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
-        
-        couponNameLabel.text = couponNameLabel.text?.uppercased()
-        locationNameLabel.text = locationNameLabel.text?.uppercased()
-        expiryDateLabel.text = expiryDateLabel.text?.uppercased()
-        
+
        
 //         scrollView.contentOffset = CGPoint(x: 1000, y: 450)
 
@@ -112,21 +109,6 @@ class DetailViewController: UIViewController,UIScrollViewDelegate{
         scrollView.contentInset = UIEdgeInsets(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-         if segue.identifier == "ShowCouponSegue"
-     {
-        let destinationViewController = segue.destination as! CouponTableViewController
-         // Pass the selected object to the new view controller.
-      
-     
-     }
-    */
-
 }
+
 

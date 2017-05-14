@@ -32,16 +32,17 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
       UNUserNotificationCenter.current().delegate = self
-        saveButton.isEnabled = false
+        saveButton.isEnabled = true
         couponNameTextField.delegate = self
         messageTextField.delegate = self
-        
+        /*
         //save button is not enabled unless the textfields are empty 
         couponNameTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
         messageTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
+        */
         
         
-        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
+        
         messageTextField.backgroundColor = UIColor.clear
         couponNameTextField.backgroundColor = UIColor.clear
        

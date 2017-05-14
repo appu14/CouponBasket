@@ -41,18 +41,14 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
         loadData()
         
         
-//          self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//          self.navigationController?.navigationBar.shadowImage = UIImage()
-          self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-          //UINavigationBar.appearance().backgroundColor = UIColor.clear
-          self.navigationController?.navigationBar.isTranslucent = true
-          view.isOpaque = false
         
-        
-        view.addGradientWithColor(color: UIColor(red:0.33, green:0.59, blue:0.69, alpha:1.0))
+        UINavigationBar.appearance().barTintColor = UIColor.clear 
+     
+       
         
     }
     
+   
    
     // MARK: - Table view data source
 
@@ -69,10 +65,20 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
             return coupons.count
         }
     }
-
+    
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
+    
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CouponTableViewCell
+        cell.backgroundColor = UIColor.clear
         
         if searchController.isActive && searchController.searchBar.text != "" {
             print(filteredResult)
@@ -83,7 +89,7 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
             dateFormatter.dateFormat = "yyyy-MM-dd"
             
             let dateString = dateFormatter.string(from: index.expiryDate! as Date)
-            cell.expiryDateLabel.text = dateString
+           // cell.expiryDateLabel.text = dateString
             
             cell.couponImageView.image = index.couponimage
             cell.locationNameLabel.text = index.reminderLocationName
@@ -108,17 +114,8 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
         // Configure the cell...
         let index = coupons[(indexPath as NSIndexPath).row]
         cell.couponNameLabel.text = index.couponName
-        
-        
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        
-//        let dateString = dateFormatter.string(from: index.expiryDate! as Date)
-//        cell.expiryDateLabel.text = dateString
-        
-             cell.couponImageView.image = index.couponimage
-        
-            //cell.locationNameLabel.text = index.reminderLocationName
+        cell.couponImageView.image = index.couponimage
+        cell.locationNameLabel.text = index.reminderLocationName
     
          
         }
@@ -128,10 +125,8 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
           cell.couponImageView.layer.cornerRadius = 15
           cell.couponImageView.layer.masksToBounds = false
           cell.couponImageView.clipsToBounds = true
-//        cell.couponImageView.contentMode = UIViewContentMode.scaleAspectFill
-          cell.backgroundColor = UIColor.clear
-          cell.couponNameLabel.text  = cell.couponNameLabel.text?.uppercased()
-
+          //cell.couponNameLabel.text  = cell.couponNameLabel.text?.uppercased()
+        
         return cell
     }
     
@@ -145,25 +140,7 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
     */
     
     
-    //MARK: Search Functions 
-    /*
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        shouldShowSearchResults = true
-        tableView.reloadData()
-    }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        shouldShowSearchResults = false
-        tableView.reloadData()
-    }
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        if !shouldShowSearchResults {
-//            shouldShowSearchResults = true
-//            tableView.reloadData()
-//        }
-//            searchController.searchBar.resignFirstResponder()
-//    }
-   */
     
     func filterContentForSearcText(searchText:String , scope: String = "All")
     {
@@ -177,6 +154,8 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
     func updateSearchResults(for searchController: UISearchController) {
      filterContentForSearcText(searchText: searchController.searchBar.text!)
     }
+    
+   
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
