@@ -67,14 +67,30 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
 
         saveButton.isEnabled = false
         
-        couponNameLabel.text = couponNameLabel.text?.uppercased()
+       // couponNameLabel.text = couponNameLabel.text?.uppercased()
+       
+    
         
-       let image = UIImage(named: "ButtonImage") as UIImage?
-        searchonlineButton.setImage(image, for: .normal)
-       let locImage = UIImage(named: "locationImage") as UIImage?
-        locationNotifierButton.setImage(locImage, for: .normal)
-       let reminderImage = UIImage(named: "timeImage") as UIImage?
-        expiryDateReminderButton.setImage(reminderImage, for: .normal)
+        
+        locationNotifierButton.layer.cornerRadius = 15
+        locationNotifierButton.layer.backgroundColor = UIColor.gray.cgColor
+        locationNotifierButton.layer.masksToBounds = false
+        locationNotifierButton.layer.borderWidth = 0.1
+        
+        expiryDateReminderButton.layer.cornerRadius = 15
+        expiryDateReminderButton.layer.borderWidth = 0.1
+        expiryDateReminderButton.layer.masksToBounds = false
+        expiryDateReminderButton.layer.backgroundColor = UIColor.gray.cgColor
+        
+        view.layer.cornerRadius = 30
+        view.layer.masksToBounds = false
+        view.layer.backgroundColor = UIColor.white.withAlphaComponent(0.80).cgColor
+        view.isOpaque = false
+
+        searchonlineButton.layer.backgroundColor = UIColor.gray.cgColor
+        searchonlineButton.layer.masksToBounds = false
+        searchonlineButton.layer.cornerRadius = 15 
+        
         
         
         
@@ -254,6 +270,13 @@ extension UIView{
         let border = CALayer()
         border.backgroundColor = color.cgColor
         border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
+    
+    func addTopBorder(color:UIColor,width:CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: 1)
         self.layer.addSublayer(border)
     }
 }
