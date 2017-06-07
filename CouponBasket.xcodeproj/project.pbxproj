@@ -22,6 +22,7 @@
 		4452F5EF1E7B2ED6007540ED /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5EE1E7B2ED6007540ED /* CouponTableViewCell.swift */; };
 		4452F5F11E7B2F06007540ED /* CouponTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5F01E7B2F06007540ED /* CouponTableViewController.swift */; };
 		4452F5F31E7B36BF007540ED /* AddCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452F5F21E7B36BF007540ED /* AddCouponViewController.swift */; };
+		44F19AED1EE31846002952A6 /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F19AEC1EE31846002952A6 /* FirstLaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4452F5EE1E7B2ED6007540ED /* CouponTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
 		4452F5F01E7B2F06007540ED /* CouponTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponTableViewController.swift; sourceTree = "<group>"; };
 		4452F5F21E7B36BF007540ED /* AddCouponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCouponViewController.swift; sourceTree = "<group>"; };
+		44F19AEC1EE31846002952A6 /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				442271A81E81ED5C00F04F49 /* GeotificationViewController.swift */,
 				442271AA1E81EE1900F04F49 /* LocationSearchTable.swift */,
 				44130E2E1E942C2D009C6D4A /* DetailViewController.swift */,
+				44F19AEC1EE31846002952A6 /* FirstLaunchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,7 +200,7 @@
 				TargetAttributes = {
 					4452F5C41E7B2C5C007540ED = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = F8BH6WSJMX;
+						DevelopmentTeam = YA33256H2H;
 						ProvisioningStyle = Automatic;
 					};
 					4452F5DB1E7B2C5C007540ED = {
@@ -256,6 +259,7 @@
 				442271A91E81ED5C00F04F49 /* GeotificationViewController.swift in Sources */,
 				442271AB1E81EE1900F04F49 /* LocationSearchTable.swift in Sources */,
 				442271A61E819DED00F04F49 /* Coupon+CoreDataClass.swift in Sources */,
+				44F19AED1EE31846002952A6 /* FirstLaunchViewController.swift in Sources */,
 				442271A71E819DED00F04F49 /* Coupon+CoreDataProperties.swift in Sources */,
 				4452F5EF1E7B2ED6007540ED /* CouponTableViewCell.swift in Sources */,
 				4452F5F11E7B2F06007540ED /* CouponTableViewController.swift in Sources */,
@@ -401,12 +405,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F8BH6WSJMX;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Apoorva Moodbidri (CV5SRN4FGA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YA33256H2H;
 				INFOPLIST_FILE = "TrialCouponedIt!! 5/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ios.TrialCouponedIt---5";
+				PRODUCT_BUNDLE_IDENTIFIER = net.apoorvamood.CouponBasket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -414,12 +423,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F8BH6WSJMX;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Apoorva Moodbidri (YA33256H2H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YA33256H2H;
 				INFOPLIST_FILE = "TrialCouponedIt!! 5/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ios.TrialCouponedIt---5";
+				PRODUCT_BUNDLE_IDENTIFIER = net.apoorvamood.CouponBasket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

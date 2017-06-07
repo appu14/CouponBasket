@@ -14,9 +14,6 @@ class CouponTableViewCell: UITableViewCell {
    
     @IBOutlet weak var couponNameLabel: UILabel!
     
-    @IBOutlet weak var expiryDateLabel: UILabel!
-    
-    
     @IBOutlet weak var locationNameLabel: UILabel!
     
     

@@ -14,7 +14,7 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,14 +27,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore {
+            print("This is not the first launch")
+        } else {
+       
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController:UINavigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "FirstLaunchView")
+        
+        self.window?.rootViewController = navigationController
+        navigationController.pushViewController(initialViewController, animated: true)
+        self.window?.makeKeyAndVisible()
+        }
         return true
     }
-    
+     
     func initializeCustomNavBarColor() -> Void {
         UINavigationBar.appearance().setBackgroundImage(UIImage.init(named: "nav_bar"), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-        UIBarButtonItem.appearance().tintColor = UIColor.white
+        UIBarButtonItem.appearance().tintColor = UIColor.clear
        // Since iOS 7.0 UITextAttributeTextColor was replaced by NSForegroundColorAttributeName
-        UINavigationBar.appearance().titleTextAttributes =  [NSForegroundColorAttributeName : UIColor.white, NSBackgroundColorAttributeName : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes =  [NSForegroundColorAttributeName : UIColor.clear, NSBackgroundColorAttributeName : UIColor.clear]
        // UITabBar.appearance().backgroundColor = UIColor.yellowColor();
 
     }

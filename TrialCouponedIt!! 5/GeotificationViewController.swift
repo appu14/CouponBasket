@@ -92,13 +92,8 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
         
                 locationSearchTable.handleMapSearchDelegate = self
 
-        
-       
         //keyboard function
         messageTextField.delegate = self
-        
-        
-        
         messageTextField.backgroundColor = UIColor.clear
     }
     
@@ -120,6 +115,7 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
             mapView.setRegion(region, animated: false)
         }
     }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
@@ -146,9 +142,9 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
         }
         return pinView
     }
-    //MARK : Actions
     
-   
+    
+    //MARK : Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
         
         delegate?.saveLocation(locationName: (selectedPin?.name)!)
@@ -183,7 +179,7 @@ class GeotificationViewController: UIViewController,CLLocationManagerDelegate,MK
             
             let content  = UNMutableNotificationContent()
             content.title = "Notification"
-            content.body = "This is your location"
+            content.body = "You can use the coupon here"
             
             let request = UNNotificationRequest(identifier: (selectedPin?.name!)!, content: content, trigger: trigger)
         
@@ -213,6 +209,8 @@ extension GeotificationViewController:HandleMapSearch {
         //Store the selected placemark
         print(placemark)
         selectedPin = placemark
+        resultSearchController?.searchBar.text = selectedPin?.title
+        
        
         //clear the exsisting pins
         mapView.removeAnnotations(mapView.annotations)

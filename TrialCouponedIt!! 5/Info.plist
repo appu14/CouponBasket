@@ -23,11 +23,25 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Allowing Access To Camera is very important for the proper functioning of the App</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>PLease let the app user your Location to work properly </string>
+	<string>Allowing the app use the location helps in obtaining the desired results </string>
 	<key>NSLocationUsageDescription</key>
-	<string>PLease let the app acess your Location for Proper functioning </string>
+	<string>Allowing the app use the location helps in obtainnig the desired results 
+&lt;plist version="1.0"&gt;
+&lt;string&gt;Allowing the app use the location helps in giving the desired results &lt;/string&gt;
+&lt;/plist&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;string&gt;Allowing the app use the location helps in giving the desired results &lt;/string&gt;
+&lt;/plist&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;string&gt;Allowing the app use the location helps in giving the desired results &lt;/string&gt;
+&lt;/plist&gt;
+Allowing the app use the location helps in giving the </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Please let the App acess location for proper functioning </string>
+	<string>Allowing the app use the location helps in obtainnig the desired results </string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allowing access to Photo Library is very important for the proper functioning of the App </string>
 	<key>UILaunchStoryboardName</key>

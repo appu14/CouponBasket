@@ -19,16 +19,17 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
     let searchController = UISearchController(searchResultsController: nil)
     var shouldShowSearchResults = false
     var filteredResult = [Coupon]()
-
+  
+    var window:UIWindow?
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+       
         
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
@@ -39,15 +40,10 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
         tableView.tableHeaderView = searchController.searchBar
         tableView.contentOffset = CGPoint(x: 0.0, y: 44.0)
         loadData()
-        
-        
-        
-        UINavigationBar.appearance().barTintColor = UIColor.clear 
-     
-       
-        
-    }
+        UINavigationBar.appearance().barTintColor = UIColor.clear
     
+       
+    }
    
    
     // MARK: - Table view data source
@@ -84,30 +80,20 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
             print(filteredResult)
             let index = filteredResult[(indexPath as NSIndexPath).row]
             cell.couponNameLabel.text = index.couponName
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            
-            let dateString = dateFormatter.string(from: index.expiryDate! as Date)
-           // cell.expiryDateLabel.text = dateString
-            
             cell.couponImageView.image = index.couponimage
             cell.locationNameLabel.text = index.reminderLocationName
           
             func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
                 
                 searchBar.text = nil
-                
                 searchBar.showsCancelButton = false
                 searchBar.endEditing(true)
                 
                 let index = coupons[(indexPath as NSIndexPath).row]
                 cell.couponNameLabel.text  = index.couponName
                 cell.couponImageView.image = index.couponimage
-                
+                cell.locationNameLabel.text = index.reminderLocationName
             }
-
-        
         }
         else {
         
@@ -243,7 +229,9 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
         tableView.reloadData()
     }
     
+
     
+ 
     
    
     // MARK: - Navigation
@@ -290,3 +278,4 @@ class CouponTableViewController: UITableViewController,SaveCoupon,UISearchResult
     }
 
 }
+

@@ -35,27 +35,19 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
         saveButton.isEnabled = true
         couponNameTextField.delegate = self
         messageTextField.delegate = self
-        /*
+        
         //save button is not enabled unless the textfields are empty 
         couponNameTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
-        messageTextField.addTarget(self, action: #selector(editTextfield(_:)), for: .editingChanged)
-        */
-        
-        
-        
+
         messageTextField.backgroundColor = UIColor.clear
         couponNameTextField.backgroundColor = UIColor.clear
        
         //cursor color for textfield
         messageTextField.tintColor = UIColor.black
         couponNameTextField.tintColor = UIColor.black
-        
-        
-        
-        
-        
-        
+     
     }
+    
   //separate func for checking the textfield is not empty and then call it on each textfield 
     func editTextfield(_ textField: UITextField) {
         if textField.text?.characters.count == 1 {
@@ -65,8 +57,8 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
             }
         }
         guard
-        let couponName = couponNameTextField.text, !couponName.isEmpty,
-        let message = messageTextField.text, !message.isEmpty
+        let couponName = couponNameTextField.text, !couponName.isEmpty
+        //let message = messageTextField.text, !message.isEmpty
             else {
                 saveButton.isEnabled = false
                 return
@@ -80,9 +72,6 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
         self.view.endEditing(true)
         return false
     }
-    
-  
-    
     
     func scheduleNotification(at date:Date) {
         let calendar = Calendar(identifier: .gregorian)
@@ -133,7 +122,6 @@ class RemindDateViewController: UIViewController,UNUserNotificationCenterDelegat
         scheduleNotification(at: datePicker.date)
         delegate?.saveCoupon(name: couponNameTextField.text!, date: datePicker.date)
         _ = navigationController?.popViewController(animated: true)
-        
         
     }
     

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SafariServices
+import UserNotifications
 
 
 protocol SaveCoupon {
@@ -33,10 +33,6 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var searchonlineButton: UIButton!
-    
-    
-    
-    
     
     let imagePicker = UIImagePickerController()
     var selectedImage:UIImage? = nil
@@ -66,12 +62,7 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         view.isOpaque = false
 
         saveButton.isEnabled = false
-        
-       // couponNameLabel.text = couponNameLabel.text?.uppercased()
-       
-    
-        
-        
+
         locationNotifierButton.layer.cornerRadius = 15
         locationNotifierButton.layer.backgroundColor = UIColor.gray.cgColor
         locationNotifierButton.layer.masksToBounds = false
@@ -90,12 +81,7 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         searchonlineButton.layer.backgroundColor = UIColor.gray.cgColor
         searchonlineButton.layer.masksToBounds = false
         searchonlineButton.layer.cornerRadius = 15 
-        
-        
-        
-        
-      
-        
+       
     }
 
     func imageTapped () {
@@ -194,8 +180,6 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
    //Protocol Adaption
     func saveCoupon(name: String, date: Date) {
         print("please ya \(name) \(date)")
@@ -218,14 +202,11 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
    
        //MARK: Actions
     
-    
     @IBAction func onlineSearchTapped(_ sender: Any) {
         if let url = NSURL(string: "http://www.google.com") {
             UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
             
         }
-        
-        
     }
     
 
@@ -238,14 +219,11 @@ class AddCouponViewController: UIViewController,UIImagePickerControllerDelegate,
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
+
     }
-    
-    
   
-    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         if segue.identifier == "DateSegue"{
